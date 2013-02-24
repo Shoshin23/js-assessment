@@ -16,10 +16,11 @@ define(function() {
     },
 
     functions : function(flag) {
+	    var getValue; //always trust function expressions. they're safer.i
       if (flag) {
-        function getValue() { return 'a'; }
+         getValue = function() { return 'a'; }
       } else {
-        function getValue() { return 'b'; }
+        getValue = function() { return 'b'; }
       }
 
       return getValue();
@@ -30,6 +31,12 @@ define(function() {
     },
 
     identity : function(val1, val2) {
+	    if(val1 === val2) { //strict comparison is truly super strict.
+		    return true;
+	    }
+	    else {
+		    return false;
+	    }
 
     }
   };
