@@ -8,8 +8,8 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      myObject = {
-        name : 'Jory'
+      var myObject = { //var removes the global nature of myObject
+	      name : 'Jory'
       };
 
       return myObject;
@@ -26,7 +26,7 @@ define(function() {
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      return parseInt(num,10); //parseInt set to base 10.
     },
 
     identity : function(val1, val2) {
