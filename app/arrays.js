@@ -43,6 +43,9 @@ return arr;
     },
 
     insert : function(arr, item, index) {
+		    arr.splice(index,0,item);
+		    return arr;
+
 
     },
 
