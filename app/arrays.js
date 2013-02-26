@@ -13,13 +13,9 @@ define(function() {
     },
 
     remove : function(arr, item) {
-	for(var i in arr) {
-		if(arr[i] == item) {
-			arr.splice(i,1);
-			break;
-		}
-	}
-return arr;
+	arr.splice(arr.indexOf(item),1);
+	return arr;
+
     },
     
     removeWithoutCopy : function(arr, item) {
@@ -61,6 +57,7 @@ return arr;
     },
 
     duplicates : function(arr) {
+	    
 
     },
 
