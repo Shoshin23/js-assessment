@@ -70,6 +70,11 @@ return arr;
     },
 
     findAllOccurrences : function(arr, target) {
+	    var arr2 = [];
+	    for(var i =0;i<arr.length;i++) {
+		    if(arr[i] === target) {arr2.push(i);}
+	    }
+	    return arr2;
 
     }
   };
