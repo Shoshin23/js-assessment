@@ -13,9 +13,15 @@ define(function() {
     },
 
     remove : function(arr, item) {
-	arr.splice(arr.indexOf(item),1);
-	return arr;
+var ret = [];
 
+      for (var i = 0, len = arr.length; i < len; i++) {
+        if (arr[i] !== item) {
+          ret.push(arr[i]);
+        }
+      }
+
+      return ret;	
     },
     
     removeWithoutCopy : function(arr, item) {
