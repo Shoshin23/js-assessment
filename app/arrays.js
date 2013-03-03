@@ -63,8 +63,14 @@ var ret = [];
     },
 
     duplicates : function(arr) {
-	    
-
+	  arr.sort();
+	  var dupes = [];
+	  for(var i =0; i< arr.length; i++) {
+		  if(arr[i + 1] == arr[i]) {
+			  dupes.push(arr[i]);
+		  }
+	  }
+	  return dupes
     },
 
     square : function(arr) {
