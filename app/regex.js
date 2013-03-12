@@ -19,6 +19,8 @@ define(function() {
     },
 
     captureThreeNumbers : function(str) {
+	    var matches = /\d{3}/.exec(str);
+	return matches ? matches[0] : false;
 
     },
 
